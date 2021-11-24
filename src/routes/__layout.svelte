@@ -1,5 +1,5 @@
 <script lang="ts">
-	import NavBar from '$lib/components/NavBar.svelte';
+	import NavBar from '$lib/components/NavBar/NavBar.svelte';
 	import '../app.css';
 </script>
 
@@ -10,7 +10,7 @@
 </main>
 
 <footer>
-	<p>visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<p>Made by nickm980</p>
 </footer>
 
 <style>

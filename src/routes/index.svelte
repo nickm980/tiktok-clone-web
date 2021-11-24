@@ -4,11 +4,14 @@
 
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Post from '$lib/components/Post.svelte';
+
 	let data = "1";
 
 	onMount(async () => {
 		console.log(data);
 	});
+
 
 </script>
 
@@ -22,10 +25,10 @@
 	{:then data} 
 		<h1>{data}</h1>
 	{/await}
-	<h2>
-		try editing <strong>src/routes/index.svelte</strong>
-	</h2>
+</section>
 
+<section>
+	<Post title="HI"></Post>
 </section>
 
 <style>

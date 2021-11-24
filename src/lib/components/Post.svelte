@@ -1,5 +1,5 @@
 <script>
-    let title;
+    export let title;
 </script>
 
 <article>
