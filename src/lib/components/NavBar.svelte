@@ -1,7 +1,3 @@
-<script lang="ts">
-    console.log("hello")
-</script>
-
 <nav class="navbar">
     <ul>
         <li>One</li>
