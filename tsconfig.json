@@ -17,9 +17,10 @@
 		"checkJs": true,
 		"paths": {
 			"src/*": ["./src/*"],
-			"$lib": ["src/lib"]
+			"$lib": ["lib"]
 		},
-		"rootDir": "src"
+		"rootDir": "src",
+		"outDir": "../build"
 	},
 	"include": ["src/**/*.d.ts", "src/**/*.js", "src/**/*.ts", "src/**/*.svelte"]
 }

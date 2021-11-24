@@ -1,8 +1,8 @@
-import { NavBar } from '../components'
-import { render, fireEvent } from '@testing-library/svelte';
+import NavBar from '../components/NavBar.svelte'
+import { render, fireEvent, RenderResult, GetByText } from '@testing-library/svelte';
 
-it('it works', async () => {
-	const { getByText, getByTestId } = render(NavBar);
+it('navbar renders to screen', async () => {
+	const result: RenderResult = render(NavBar);
 	expect(true).toBe(true);
 });
 

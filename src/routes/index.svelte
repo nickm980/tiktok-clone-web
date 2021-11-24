@@ -4,9 +4,7 @@
 
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fetchData } from "$lib/]]";
-
-	let data = fetchData();
+	let data = "1";
 
 	onMount(async () => {
 		console.log(data);
@@ -22,7 +20,7 @@
 	{#await data}
 		<h1>Loading...</h1>
 	{:then data} 
-		<h1>{data.title}</h1>
+		<h1>{data}</h1>
 	{/await}
 	<h2>
 		try editing <strong>src/routes/index.svelte</strong>
