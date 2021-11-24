@@ -1,4 +1,4 @@
-import NavBar from '../components/NavBar.svelte'
+import NavBar from '../components/NavBar/NavBar.svelte'
 import { render, fireEvent, RenderResult, GetByText } from '@testing-library/svelte';
 
 it('navbar renders to screen', async () => {

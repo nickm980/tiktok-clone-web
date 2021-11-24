@@ -7,7 +7,7 @@
 
 <nav>
 	<div class="child left">
-        <a href="$"><Icon data={faHamburger} scale={1.5} /></a>
+        <a href="#"><Icon data={faHamburger} scale={1.5} /></a>
 		<a href="#" class="mobile-hide">Flexbox</a>
 	</div>
 	<div class="child center">
@@ -15,10 +15,10 @@
 	</div>
 	<!-- <div class="space" /> -->
 	<div class="child right">
-		<a href="$" class="icons"><Icon data={ambulance} scale={1.5} /></a>
-		<a href="$" class="icons"><Icon data={ambulance} scale={1.5} /></a>
-		<a href="$" class="icons"><Icon data={ambulance} scale={1.5} /></a>
-		<a href="$" class="icons"><Icon data={ambulance} scale={1.5} /></a>
+		<a href="#" class="icons"><Icon data={ambulance} scale={1.5} /></a>
+		<a href="#" class="icons"><Icon data={ambulance} scale={1.5} /></a>
+		<a href="#" class="icons"><Icon data={ambulance} scale={1.5} /></a>
+		<a href="#" class="icons"><Icon data={ambulance} scale={1.5} /></a>
 		<img alt="Profile" src="../profile-blank.png" />
 	</div>
 </nav>
