@@ -4,7 +4,7 @@
 
 <script lang="ts">
 	import { onMount } from 'svelte';
-	import { fetchData } from '$lib/data';
+	import { fetchData } from "$lib/]]";
 
 	let data = fetchData();
 
