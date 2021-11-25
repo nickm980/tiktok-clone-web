@@ -1,31 +1,40 @@
 <script>
-	import Icon from 'svelte-awesome';
-	import { plusSquare, ambulance } from 'svelte-awesome/icons';
-	import { faFlag, faHamburger } from '@fortawesome/free-solid-svg-icons';
+	import {
+		faEnvelope,
+		faHamburger,
+		faHeart,
+		faSearch,
+		faPlus,
+		faBookmark
+	} from '@fortawesome/free-solid-svg-icons';
 	import SearchBar from './Search.svelte';
+	import Fa from 'svelte-fa/src/fa.svelte';
 </script>
 
 <nav>
-	<div class="child left">
-        <a href="#d" class="hamburger"><Icon data={faHamburger} scale={1.5} /></a>
-		<a href="#d" class="mobile-hide">Social</a>
-	</div>
-	<div class="child center">
-		<SearchBar />
-	</div>
-	<!-- <div class="space" /> -->
-	<div class="child right">
-		<a href="#d" class="icons"><Icon data={ambulance} scale={1.5} /></a>
-		<a href="#e" class="icons"><Icon data={ambulance} scale={1.5} /></a>
-		<a href="#f" class="icons"><Icon data={ambulance} scale={1.5} /></a>
-		<a href="#g" class="icons"><Icon data={ambulance} scale={1.5} /></a>
-		<a href="#hj"><img alt="Profile" src="../profile-blank.png" /></a>
+	<div class="container">
+		<div class="child left">
+			<a href="#d" class="hamburger"><Fa icon={faHamburger} scale={1.5} /></a>
+			<a href="#d" class="mobile-hide">Social</a>
+		</div>
+		<div class="child center">
+			<SearchBar />
+		</div>
+		<!-- <div class="space" /> -->
+		<div class="child right">
+			<a href="#d" class="icons"><Fa icon={faEnvelope} scale={1.3} /></a>
+			<a href="#e" class="icons"><Fa icon={faBookmark} scale={1.3} /></a>
+			<a href="#f" class="icons"><Fa icon={faPlus} scale={1.3} /></a>
+			<a href="#g" class="icons"><Fa icon={faHeart} scale={1.3} /></a>
+			<a href="#hj"><img alt="Profile" src="../profile-blank.png" /></a>
+		</div>
 	</div>
 </nav>
 
 <style>
-	div {
-		/* outline: 1px solid black; */
+	.icons {
+		color: black;
+		stroke: black;
 	}
 	.center {
 		text-align: center;
@@ -39,13 +48,18 @@
 		border-radius: 50%;
 	}
 
-	nav {
+	.container {
 		display: flex;
 		flex-wrap: nowrap;
 		justify-content: space-between;
 		align-items: center;
 		align-content: stretch;
+	}
+
+	nav {
 		background: white;
+		width: 100%;
+		border-bottom: 1px solid rgb(207, 207, 207);
 	}
 
 	.center {
@@ -53,42 +67,37 @@
 		padding: 10px;
 	}
 
-	.space {
-		flex-grow: 2;
-	}
-
-	/* nav div {
-        outline: 1px solid black;
-    } */
-
 	.right {
 		padding-right: 20px;
-        padding-left: 20px;
+		padding-left: 20px;
+		display: flex;
+		align-items: center;
 	}
 
 	.left {
-		padding-left: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 
 	.icons {
-		padding-right: 10px;
+		padding-right: 20px;
 	}
 
-    .hamburger {
-        display: none;
-    }
+	.hamburger {
+		display: none;
+	}
 
 	@media only screen and (max-width: 600px) {
 		.mobile-hide {
 			display: none;
 		}
 
-        .icons {
-            display: none;
-        }
+		.icons {
+			display: none;
+		}
 
-        .hamburger {
-            display: block;
-        }
+		.hamburger {
+			display: block;
+		}
 	}
 </style>
