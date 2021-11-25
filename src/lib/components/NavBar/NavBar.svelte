@@ -7,19 +7,19 @@
 
 <nav>
 	<div class="child left">
-        <a href="#"><Icon data={faHamburger} scale={1.5} /></a>
-		<a href="#" class="mobile-hide">Flexbox</a>
+        <a href="#d" class="hamburger"><Icon data={faHamburger} scale={1.5} /></a>
+		<a href="#d" class="mobile-hide">Social</a>
 	</div>
 	<div class="child center">
 		<SearchBar />
 	</div>
 	<!-- <div class="space" /> -->
 	<div class="child right">
-		<a href="#" class="icons"><Icon data={ambulance} scale={1.5} /></a>
-		<a href="#" class="icons"><Icon data={ambulance} scale={1.5} /></a>
-		<a href="#" class="icons"><Icon data={ambulance} scale={1.5} /></a>
-		<a href="#" class="icons"><Icon data={ambulance} scale={1.5} /></a>
-		<img alt="Profile" src="../profile-blank.png" />
+		<a href="#d" class="icons"><Icon data={ambulance} scale={1.5} /></a>
+		<a href="#e" class="icons"><Icon data={ambulance} scale={1.5} /></a>
+		<a href="#f" class="icons"><Icon data={ambulance} scale={1.5} /></a>
+		<a href="#g" class="icons"><Icon data={ambulance} scale={1.5} /></a>
+		<a href="#hj"><img alt="Profile" src="../profile-blank.png" /></a>
 	</div>
 </nav>
 
@@ -75,7 +75,7 @@
 	}
 
     .hamburger {
-        display: hidden;
+        display: none;
     }
 
 	@media only screen and (max-width: 600px) {
@@ -88,7 +88,7 @@
         }
 
         .hamburger {
-            display: visible;
+            display: block;
         }
 	}
 </style>

@@ -12,7 +12,11 @@
 		console.log(data);
 	});
 
-
+	let cats = [
+		{ title: 'J---aiyznGQ', likeAmount: 3, commentAmount: 4, img: "https://img.url/" },
+		{ title: 'J---aiyznGQ', likeAmount: 4, commentAmount: 4, img: "https://img.url/" },
+		{ title: 'J---aiyznGQ', likeAmount: 5, commentAmount: 4, img: "https://img.url/" },
+	];
 </script>
 
 <svelte:head>
@@ -28,7 +32,9 @@
 </section>
 
 <section>
-	<Post title="HI"></Post>
+	{#each cats as cat}
+		<Post postData={cat}></Post>
+	{/each}
 </section>
 
 <style>

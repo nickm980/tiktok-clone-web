@@ -1,14 +1,16 @@
-<script>
-    export let title;
+<script lang="ts">
+    import type PostData from 'PostData';
+
+    export let postData: PostData;
 </script>
 
-<article>
+<article class="post">
     <div class="title">
-        {title}
+        {postData.title}
     </div>
 
     <div class="photo">
-
+        {postData.likeAmount}
     </div>
 
     <div class="likes">
@@ -20,5 +22,12 @@
     .title {
         color: black;
         font-size: 3rem;
+    }
+
+    .post {
+        max-width: 500px;
+        width: 100%;
+        height: 400px;
+        outline: 1px solid black;
     }
 </style>
