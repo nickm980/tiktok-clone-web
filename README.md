@@ -3,7 +3,6 @@
 ### Screenshots
 Social website developed with svelte [click to visit demo](https://social-website-frontend.vercel.app/)
 
-![image](https://user-images.githubusercontent.com/81270095/143273919-9b1de936-01f6-4dc0-929d-ef6225a2aaf0.png)
 ![image](https://user-images.githubusercontent.com/81270095/143327050-3bd603c5-4218-406f-96a1-8681e449bbb0.png)
 
 ### Features
