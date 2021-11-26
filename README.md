@@ -4,6 +4,7 @@
 Social website developed with svelte [click to visit demo](https://social-website-frontend.vercel.app/)
 
 ![image](https://user-images.githubusercontent.com/81270095/143505243-1de3730f-40e0-4e31-91fb-ef35e424563e.png)
+![image](https://user-images.githubusercontent.com/81270095/143509327-03b10d70-c873-40fe-a97f-efefa5b8aaf7.png)
 
 ### Features
 - Homepage ✔️
