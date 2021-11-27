@@ -1,112 +1,74 @@
 <script lang="ts">
-	import type PostData from 'PostData';
+	import type PostData from 'lib/types/PostData';
 	import {
-		faEnvelope,
-		faHamburger,
 		faHeart,
-		faUserFriends,
-		faPlane,
-		faBookmark
+		faBookmark,
+		faEllipsisV,
+		faBook,
+		faLongArrowAltRight,
+		faPeopleArrows,
+		faArrowAltCircleRight,
+		faPaperPlane
 	} from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa/src/fa.svelte';
 	import Comment from './Comment.svelte';
+	import Data from './_components/Data.svelte';
+
 	export let postData: PostData;
 </script>
 
-<article class="post">
-	<div class="imageside">
-		<div class="photo" style="--img-url: {postData.img}">
-		</div>
+<div class="post">
+	<div style="background-image: url('{postData.img}');" class="img" />
+
+	<div class="bottom">
+		<input class="addcomment" placeholder="Comment" />
 	</div>
 
-	<div class="commentside">
-		<div class="description commentchild">
-			<b>username</b>
-			<p>{postData.title}</p>
+	<div class="data">
+		<div class="icon">
+			<Data icon={faHeart} />
 		</div>
-
-		<Comment></Comment>
-		<div class="stretch commentchild"></div>
-
-		<div class="input">
-			<div class="data">
-				<div class="likes">
-					<a href="#d" class="icons">{postData.likeAmount} <Fa icon={faHeart} scale={1.3} /></a>
-					<a href="#d" class="icons">{postData.likeAmount} <Fa icon={faBookmark} scale={1.3} /></a>
-				</div>
-			</div>
-			<input class="addcomment" placeholder="Add Comment">
+		<div class="icon">
+			<Data icon={faBookmark} />
+		</div>
+		<div class="icon">
+			<Data icon={faPaperPlane} />
 		</div>
 	</div>
-</article>
+</div>
 
 <style>
-	.icons {
-		padding-left: 5px;
-	}
-	.stretch {
-		flex-grow: 2;
-	}
-	.imageside {
-		/* border-right: 1px solid orange; */
-		display: flex;
-		flex-direction: column;
-		border-right: 1px solid rgb(238, 238, 238);
-		width: 50%;
-	}
-	.commentside {
-		display: flex;
-		flex-direction: column;
-		flex-wrap: wrap;
-		width: 50%;
-		/* border-right: 13px solid blue; */
-	}
-	
-	.data {
-		display: flex;
-		padding-top: 25px;
-		padding-bottom: 5px;
-	}
-	.description {
-		color: black;
-		font-size: 1rem;
-		border-bottom: 1px solid rgb(238, 238, 238);
-		padding-bottom: 10px;
-		padding-top: 10px;
-	}
-
-	.description p {
-		display: inline;
+	.img {
+		width: 100%;
+		height: 500px;
+		aspect-ratio: 3/4;
 	}
 
 	.post {
-		display: flex;
-		max-width: 800px;
 		width: 100%;
-		height: 400px;
+		max-width: 500px;
+		border: 1px solid orange;
 		margin-top: 20px;
-		background-color: white;
-		border: 1px solid rgb(238, 238, 238);
 	}
 
-	.post-img {
+	.addcomment {
 		width: 100%;
 	}
 
-	.photo {
-		background-image: url(https://i.insider.com/61732f6d4f281c001296b5a7?width=890&format=jpeg);
-		flex-grow: 2;
-	}
-
-	input {
-		padding-top: 15px;
-		padding-bottom: 15px;
-		padding-left: 15px;
-		border: 1px solid rgb(238, 238, 238);
-		min-width: 100%;
-	}
-
-	.input {
+	.bottom {
 		width: 100%;
+	}
+
+	.data {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+
+		flex: 2 2 auto;
+		/* width: 100%; */
+	}
+
+	.icon {
+		margin-left: 20px;
 	}
 </style>

@@ -1,27 +1,30 @@
 <script>
 	import {
 		faEnvelope,
-		faHamburger,
+		faBars,
 		faHeart,
 		faSearch,
 		faPlus,
 		faBookmark
 	} from '@fortawesome/free-solid-svg-icons';
-	import SearchBar from './Search.svelte';
 	import Fa from 'svelte-fa/src/fa.svelte';
+	import SearchBar from './_components/Search.svelte';
 </script>
 
 <nav>
 	<div class="container">
 		<div class="child left">
-			<a href="#d" class="hamburger"><Fa icon={faHamburger} scale={1.5} /></a>
+			<a href="#d" class="hamburger"><Fa icon={faBars} scale={1.5} /></a>
 			<a href="#d" class="mobile-hide">Social</a>
 		</div>
 		<div class="child center">
-			<SearchBar />
+			<div class="searchbar">
+				<SearchBar />
+			</div>
 		</div>
 		<!-- <div class="space" /> -->
 		<div class="child right">
+			<a href="#d" class="icons searchbutton"><Fa icon={faSearch} scale={1.3} /></a>
 			<a href="#d" class="icons"><Fa icon={faEnvelope} scale={1.3} /></a>
 			<a href="#e" class="icons"><Fa icon={faBookmark} scale={1.3} /></a>
 			<a href="#f" class="icons"><Fa icon={faPlus} scale={1.3} /></a>
@@ -54,6 +57,8 @@
 		justify-content: space-between;
 		align-items: center;
 		align-content: stretch;
+		max-width: 1250px;
+		margin: 0 auto;
 	}
 
 	nav {
@@ -80,24 +85,31 @@
 	}
 
 	.icons {
-		padding-right: 20px;
+		margin-right: 20px;
 	}
 
 	.hamburger {
 		display: none;
 	}
-
-	@media only screen and (max-width: 600px) {
+	.searchbutton {
+		display: none;
+	}
+	@media only screen and (max-width: 800px) {
 		.mobile-hide {
-			display: none;
-		}
-
-		.icons {
 			display: none;
 		}
 
 		.hamburger {
 			display: block;
+		}
+	}
+	@media only screen and (max-width: 480px) {
+		.searchbutton {
+			display: block;
+		}
+
+		.searchbar {
+			display: none;
 		}
 	}
 </style>
