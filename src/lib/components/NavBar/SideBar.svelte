@@ -3,7 +3,7 @@
 	import HashTag from './_components/HashTag.svelte';
 	import NavLink from './_components/NavLink.svelte';
 	import NavUser from './_components/NavUser.svelte';
-
+	import Fa from 'svelte-fa/src/fa.svelte';
 	const person1 = {
 		imgUrl:
 			'https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1646315618666501~c5_100x100.jpeg?x-expires=1637946000&x-signature=eiOmQ%2BRhkXFC0ZZPSbBB7V%2FLvxU%3D',
@@ -11,12 +11,14 @@
 		fullname: 'Will Smith',
 		verified: false
 	};
+
+	const iconScale = 1.5;
 </script>
 
 <nav id="sidebar-lg">
 	<div class="buttons">
 		<NavLink icon={faHome} href="/" active={true}>For You</NavLink>
-		<NavLink icon={faUserFriends} href="/" active={false}>Following</NavLink>
+		<NavLink icon={faUserFriends} href="/feed" active={false}>Following</NavLink>
 	</div>
 
 	<div class="create">
@@ -35,23 +37,34 @@
 
 	<h2>Discover</h2>
 	<div class="discover">
-		<HashTag tag="#ThisisTag" />
-		<HashTag tag="#foryoupage" />
-		<HashTag tag="#new" />
-		<HashTag tag="#trending" />
-		<HashTag tag="#thisisaverylonghashtagwhichislong" />
-		<HashTag tag="#willsmith" />
-		<HashTag tag="#new" />
-		<HashTag tag="#new" />
-		<HashTag tag="#new" />
+		<HashTag tag="ThisisTag" />
+		<HashTag tag="foryoupage" />
+		<HashTag tag="new" />
+		<HashTag tag="trending" />
+		<HashTag tag="thisisaverylonghashtagwhichislong" />
+		<HashTag tag="willsmith" />
+		<HashTag tag="new" />
+		<HashTag tag="new" />
+		<HashTag tag="new" />
 	</div>
 </nav>
 
 <nav id="sidebar-sm">
-	HI
+	<Fa icon={faHome} scale={iconScale}/>
+	<Fa icon={faUserFriends} scale={iconScale}/>
 </nav>
 
 <style>
+	#sidebar-sm {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: wrap;
+	}
+
+	#sidebar-sm > :global(*) {
+		border: 3px solid green;
+	}
+
 	#sidebar-lg::-webkit-scrollbar-thumb {
 		display: none;
 	}
@@ -75,6 +88,7 @@
 	.discover > :global(*) {
 		margin-left: var(--hashtag-margins);
 		margin-top: var(--hashtag-margins);
+		display: inline-block;
 	}
 
 	#sidebar-lg {
@@ -86,6 +100,7 @@
 		max-height: calc(90vh);
 		overflow-y: visible;
 		padding-right: 4px;
+		padding-left: 14px;
 	}
 
 	.buttons {

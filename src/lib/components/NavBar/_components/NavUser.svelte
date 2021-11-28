@@ -2,10 +2,12 @@
 	export let user;
 </script>
 
-<a href={user.username} class="account">
+<a href="/{user.username}" class="account">
 	<img class="avatar" src={user.imgUrl} alt="" />
 	<div class="info">
-		<p class="username">{user.username}<span class={user.verified ? "verified" : "not-verified"}>V</span></p>
+		<p class="username">
+			{user.username}<span class={user.verified ? 'verified' : 'not-verified'}>V</span>
+		</p>
 		<p class="bio">{user.fullname}</p>
 	</div>
 </a>
@@ -55,12 +57,12 @@
 		font-size: 0.7rem;
 	}
 
-    .verified {
-        color: blue;
-        display: block;
-    }
+	.verified {
+		color: blue;
+		display: block;
+	}
 
-    .not-verified {
-        display: none;
-    }
+	.not-verified {
+		display: none;
+	}
 </style>

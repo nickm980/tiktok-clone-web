@@ -1,14 +1,19 @@
 <script>
 	import { faEnvelope, faHeart, faUserFriends } from '@fortawesome/free-solid-svg-icons';
 	import ActionButton from '$lib/components/shared/ActionButton.svelte';
-	import Fa from 'svelte-fa/src/fa.svelte';
 	import SvelteSeo from 'svelte-seo';
+	import PostPreview from '$lib/components/Posts/PostPreview.svelte';
 
 	let post = [
 		{
 			imgUrl:
 				'https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1646315618666501~c5_100x100.jpeg?x-expires=1637946000&x-signature=eiOmQ%2BRhkXFC0ZZPSbBB7V%2FLvxU%3D',
 			name: 'Keyboard Cat'
+		},
+		{
+			imgUrl:
+				'https://p16-sign-va.tiktokcdn.com/musically-maliva-obj/1646315618666501~c5_100x100.jpeg?x-expires=1637946000&x-signature=eiOmQ%2BRhkXFC0ZZPSbBB7V%2FLvxU%3D',
+			name: 'Maru'
 		},
 		{
 			imgUrl:
@@ -48,10 +53,7 @@
 
 <div class="posts">
 	{#each post as post}
-		<button style="background-image: url('{post.imgUrl}');" class="post">
-			<p>20</p>
-			<p><Fa icon={faHeart} scale={2} /></p>
-		</button>
+		<PostPreview imgUrl={post.imgUrl} />
 	{/each}
 </div>
 
@@ -64,32 +66,11 @@
 		line-height: 0;
 		padding: 0.2em;
 	}
-	.post {
-		border: none;
-		height: 250px;
-	}
-
-	.post p {
-		color: white;
-		display: inline;
-		display: none;
-		top: 50%;
-		left: 50%;
-		margin: 0 auto;
-		z-index: 2;
-	}
-
-	.post:hover p {
-		display: block;
-	}
-
-	.post:hover {
-		cursor: pointer;
-	}
 
 	.profile-picture {
 		border-radius: 100%;
 	}
+
 	.head {
 		margin: 0 auto;
 		padding-top: 40px;
@@ -98,11 +79,8 @@
 	}
 
 	.posts {
-		display: grid;
+		width: 100%;
 		text-align: center;
-		grid-gap: 20px;
-		grid-template-columns: repeat(auto-fill, 250px);
-		justify-content: center;
 	}
 
 	.data p {

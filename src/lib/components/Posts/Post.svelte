@@ -4,10 +4,6 @@
 		faHeart,
 		faBookmark,
 		faEllipsisV,
-		faBook,
-		faLongArrowAltRight,
-		faPeopleArrows,
-		faArrowAltCircleRight,
 		faPaperPlane
 	} from '@fortawesome/free-solid-svg-icons';
 	import Fa from 'svelte-fa/src/fa.svelte';
@@ -25,12 +21,12 @@
 		<Data icon={faBookmark} />
 		<Data icon={faPaperPlane} />
 		<div class="report">
-			<Fa icon={faEllipsisV} scale={1.3}></Fa>
+			<Fa icon={faEllipsisV} scale={1.3} />
 		</div>
 	</div>
 
 	<div class="bottom">
-		<div>Hello</div>
+		<Comment username="hello" comment="this is an interesting post!" likes={2} />
 		<input class="addcomment" placeholder="Comment" />
 	</div>
 </div>

@@ -103,3 +103,11 @@ button:focus:not(:focus-visible) {
 *, ::after, ::before {
 	box-sizing: border-box;
   }
+
+  a:hover {
+	  text-decoration: none;
+  }
+
+  a {
+	  color: inherit;
+  }

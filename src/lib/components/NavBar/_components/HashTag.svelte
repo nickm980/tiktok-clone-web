@@ -1,10 +1,13 @@
-<script>
+<script lang="ts">
 	export let tag;
+	export let linkType: 'button' | 'text' = 'button';
 </script>
 
-<button class="hashtag">
-	{tag}
-</button>
+{#if linkType == 'button'}
+	<a href="/tags/{tag}" class="hashtag">#{tag}</a>
+{:else}
+	<a href="/tags/{tag}">#{tag}</a>
+{/if}
 
 <style>
 	.hashtag {
