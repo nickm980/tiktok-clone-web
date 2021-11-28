@@ -3,9 +3,9 @@
 	import Fa from 'svelte-fa/src/fa.svelte';
 </script>
 
-<form id="search">
+<form>
 	<input placeholder="Search" />
-	<a href="#f" class="button" tabindex="-1">
+	<a href="#f" class="search-icon" tabindex="-1">
 		<span><Fa icon={faSearch} scale={1} /></span>
 	</a>
 </form>
@@ -15,6 +15,7 @@
 		--border-radius: 40px;
 		--outline-color: rgb(220, 220, 220);
 	}
+	
 	form {
 		width: 100%;
 		display: flex;
@@ -34,7 +35,7 @@
 		background: none;
 	}
 
-	input:focus + .button {
+	input:focus + .search-icon {
 		/* Reset padding so that border does not cause shift */
 		padding: 0px;
 		padding-right: 25px;
@@ -62,7 +63,7 @@
 		border-top-right-radius: 0;
 	}
 
-	.button {
+	.search-icon {
 		height: 35px;
 		display: inline-block;
 		color: black;
@@ -74,11 +75,11 @@
 		text-align: center;
 	}
 
-	.button:hover {
+	.search-icon:hover {
 		background-color: rgb(235, 235, 235);
 	}
 
-	.button span {
+	.search-icon span {
 		display: inline-block;
 		top: 50%;
 		left: 50%;

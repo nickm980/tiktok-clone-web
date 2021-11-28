@@ -1,7 +1,4 @@
 <script lang="ts">
-	import { faCheck } from '@fortawesome/free-solid-svg-icons';
-	import Fa from 'svelte-fa/src/fa.svelte';
-
 	export let user;
 </script>
 

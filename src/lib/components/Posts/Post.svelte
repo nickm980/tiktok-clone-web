@@ -18,37 +18,45 @@
 </script>
 
 <div class="post">
-	<div style="background-image: url('{postData.img}');" class="img" />
-
-	<div class="bottom">
-		<input class="addcomment" placeholder="Comment" />
-	</div>
+	<img src={postData.img} alt="" class="img" />
 
 	<div class="data">
-		<div class="icon">
-			<Data icon={faHeart} />
+		<Data icon={faHeart} />
+		<Data icon={faBookmark} />
+		<Data icon={faPaperPlane} />
+		<div class="report">
+			<Fa icon={faEllipsisV} scale={1.3}></Fa>
 		</div>
-		<div class="icon">
-			<Data icon={faBookmark} />
-		</div>
-		<div class="icon">
-			<Data icon={faPaperPlane} />
-		</div>
+	</div>
+
+	<div class="bottom">
+		<div>Hello</div>
+		<input class="addcomment" placeholder="Comment" />
 	</div>
 </div>
 
 <style>
 	.img {
 		width: 100%;
-		height: 500px;
-		aspect-ratio: 3/4;
+		height: auto;
+		aspect-ratio: 4/3;
+	}
+
+	.data > :global(*) {
+		margin-left: 10px;
+	}
+
+	.report {
+		margin-left: auto;
+		right: 0;
 	}
 
 	.post {
 		width: 100%;
 		max-width: 500px;
-		border: 1px solid orange;
 		margin-top: 20px;
+		border-bottom: 1px solid rgb(216, 216, 216);
+		padding-bottom: 15px;
 	}
 
 	.addcomment {
@@ -63,12 +71,9 @@
 		display: flex;
 		flex-direction: row;
 		flex-wrap: nowrap;
-
+		/* border: 10px solid purple; */
 		flex: 2 2 auto;
+		margin-left: -10px;
 		/* width: 100%; */
-	}
-
-	.icon {
-		margin-left: 20px;
 	}
 </style>

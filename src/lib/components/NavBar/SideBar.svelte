@@ -1,10 +1,8 @@
 <script>
-	import { faHome, faUser, faUserFriends } from '@fortawesome/free-solid-svg-icons';
-	import Fa from 'svelte-fa/src/fa.svelte';
+	import { faHome, faUserFriends } from '@fortawesome/free-solid-svg-icons';
 	import HashTag from './_components/HashTag.svelte';
-	import NavButton from './_components/NavButton.svelte';
+	import NavLink from './_components/NavLink.svelte';
 	import NavUser from './_components/NavUser.svelte';
-	import { fly } from 'svelte/transition';
 
 	const person1 = {
 		imgUrl:
@@ -15,16 +13,10 @@
 	};
 </script>
 
-<nav id="nav">
+<nav id="sidebar-lg">
 	<div class="buttons">
-		<NavButton href="/" active={true}>
-			<Fa icon={faHome} scale={1.3} />
-			<div class="pl">For You</div>
-		</NavButton>
-		<NavButton href="">
-			<Fa icon={faUserFriends} scale={1.3} />
-			<div class="pl">Following</div>
-		</NavButton>
+		<NavLink icon={faHome} href="/" active={true}>For You</NavLink>
+		<NavLink icon={faUserFriends} href="/" active={false}>Following</NavLink>
 	</div>
 
 	<div class="create">
@@ -55,14 +47,16 @@
 	</div>
 </nav>
 
+<nav id="sidebar-sm">
+	HI
+</nav>
+
 <style>
-
-
-	nav::-webkit-scrollbar-thumb {
+	#sidebar-lg::-webkit-scrollbar-thumb {
 		display: none;
 	}
 
-	nav:hover::-webkit-scrollbar-thumb {
+	#sidebar-lg:hover::-webkit-scrollbar-thumb {
 		display: block;
 	}
 
@@ -83,12 +77,7 @@
 		margin-top: var(--hashtag-margins);
 	}
 
-	.pl {
-		display: inline-block;
-		padding-left: 15px;
-	}
-
-	nav {
+	#sidebar-lg {
 		display: flex;
 		flex-direction: column;
 		height: 100%;
@@ -106,7 +95,7 @@
 		margin-top: 20px;
 		border-bottom: 1px solid rgb(243, 243, 243);
 	}
-	nav:hover {
+	#sidebar-lg:hover {
 		overflow-x: hidden;
 		overflow-y: visible;
 	}
@@ -139,9 +128,18 @@
 		background-color: rgb(255, 233, 194);
 	}
 
+	#sidebar-sm {
+		display: none;
+		border: 2px solid green;
+		height: 90vh;
+	}
+
 	@media (max-width: 800px) {
-		nav {
+		#sidebar-lg {
 			display: none;
+		}
+		#sidebar-sm {
+			display: block;
 		}
 	}
 </style>
