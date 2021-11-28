@@ -1,5 +1,7 @@
 # social-website
 
+There is also a mobile app [here](https://youtube.com/)
+
 ### Screenshots
 Social website developed with svelte [click to visit demo](https://social-website-frontend.vercel.app/)
 
